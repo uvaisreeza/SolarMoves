@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarMoves</title>
+    <link rel="shortcut icon" href="./images/sunlogofav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style0.css">
+    <script src="./calculate.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul id="first-ul">
+            <li class="extra" style="gap: 0px !important;">
+                <div id="post-img-holder"><img src="./sunlogo.png"></div>
+                <h1 id="logo">SolarMoves</h1>
+            </li>
+            <li>
+                <ul id="second-ul">
+                    <a href="#intro">
+                        <li class="nav-options">Introduction</li>
+                    </a>
+                    <a href="#process">
+                        <li class="nav-options">Process</li>
+                    </a>
+                    <a href="#benefits">
+                        <li class="nav-options">Benefits</li>
+                    </a>
+                    <a href="#fourth-sec">
+                        <li class="nav-options">Components</li>
+                    </a>
+                    <a href="#fifth-sec">
+                        <li class="nav-options">Calculator</li>
+                    </a>
+                    <li class="extra">
+                        <div><input type="text" id="search" placeholder="Search any keyword"></div>
+                        <button class="search-btn" onclick="findkeyname()">search</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+
+        <span id="intro"></span>
+        <div id="first-sec">
+
+            <div id="layer1">
+                <br><br><br><br>
+                <h1 class="heading01">Welcome,<br>Lets know what is Solar Energy</h1>
+
+                <div id="part-holder">
+                    <div id="text-cont">
+                        <p><span id="capital">S</span>olar energy is radiant light and heat from the Sun that is
+                            harnessed using a range of technologies such as solar power to generate electricity, solar
+                            thermal energy (including solar water heating), and solar architecture. It is an
+                            essential source of renewable energy, and its technologies are broadly characterized as
+                            either passive solar or active solar depending on how they capture and distribute solar
+                            energy or convert it into solar power. Active solar techniques include the use of
+                            photovoltaic systems, concentrated solar power, and solar water heating to harness the
+                            energy. Passive solar techniques include orienting a building to the Sun, selecting
+                            materials with favorable thermal mass or light-dispersing properties, and designing spaces
+                            that naturally circulate air.</p>
+                        <br>
+                        <p>In 2011, the International Energy Agency said that "the development of affordable,
+                            inexhaustible and clean solar energy technologies will have huge longer-term benefits. It
+                            will increase countries' energy security through reliance on an indigenous, inexhaustible,
+                            and mostly import-independent resource, enhance sustainability, reduce pollution, lower the
+                            costs of mitigating global warming .... these advantages are global".</p>
+                        <a href="https://en.wikipedia.org/wiki/Solar_energy" id="more">for more information click
+                            herer...</a><br><br><br><br>
+                        <span id="process"></span>
+                    </div>
+                    <div id="scroll-holder">
+                        <section class="sliding-img-holder" id="abc"><img class="sliding-img"
+                                src="./images/Earth-power-potential.jpg" alt="" srcset=""></section>
+                        <section class="sliding-img-holder"><img class="sliding-img"
+                                src="./images/Reflection-absorption-solar-energy-surface-atmosphere-sunlight.webp"
+                                alt="" srcset=""></section>
+                        <section class="sliding-img-holder"><img class="sliding-img" src="./images/solar-energy.jpg"
+                                alt="" srcset=""></section>
+                        <section class="sliding-img-holder"><img class="sliding-img" src="./images/solar-energy01.jpg"
+                                alt="" srcset=""></section>
+                        <section class="sliding-img-holder"><img class="sliding-img" src="./images/solar-energy02.jpg"
+                                alt="" srcset=""></section>
+                        <section class="sliding-img-holder"><img class="sliding-img" src="./images/solar-energy03.jpg"
+                                alt="" srcset=""></section>.
+                        <section class="sliding-img-holder"><img class="sliding-img"
+                                src="./images/Solar-panel-array-rooftop.webp" alt="" srcset=""></section>
+                    </div>
+
+                </div>
+
+
+                <script>
+
+
+                    let width = document.getElementById("abc").offsetWidth;
+                    let element = document.querySelector('#scroll-holder');
+                    let realwidth = element.scrollWidth + (width / 2);
+                    let fakewidth = element.scrollWidth - (width * 3);
+                    console.log(realwidth);
+                    let i = 0;
+                    function scrollleft() {
+                        element.scrollBy(1, 0);
+                        scrolldelay = setTimeout('scrollleft()', 20);
+                        i = i + 1;
+                        if (i >= realwidth) {
+                            clearTimeout(scrolldelay);
+                            i = 0;
+                            scrollright();
+                        }
+                    }
+                    function scrollright() {
+                        element.scrollBy(-1, 0);
+                        scrolldelay = setTimeout('scrollright()', 35);
+                        i = i - 1;
+                        if (i <= -fakewidth) {
+                            clearTimeout(scrolldelay);
+                            i = 0;
+                            scrollleft();
+                        }
+                    }
+                    scrollleft();
+
+                </script>
+            </div>
+
+        </div>
+        <div id="second-sec">
+            <h2 class="heading01" style="margin-top: 50px;">How Solar Energy Comes in Use</h2>
+            <div id="main-cont-holder">
+                <div id="all-holder">
+                    <div id="first-h" class="ih">
+                        <img class="pro-img" src="./images/sunlight-to-solar-pannel.jpg">
+                    </div>
+                    <div id="second-h" class="ih">
+                        <img id="fourth-arrow" src="./images/arrow.png">
+                        <img id="first-arrow" src="./images/arrow.png">
+                    </div>
+                    <div id="third-h" class="ih">
+                        <img class="pro-img" src="./images/connection-at-home.jpg">
+                        <img class="pro-img" src="./images/saving-solar-to-bat.jpg">
+                    </div>
+                    <div id="fourth-h" class="ih">
+                        <img id="third-arrow" src="./images/arrow.png">
+                        <img id="second-arrow" src="./images/arrow.png">
+                    </div>
+                    <div id="fifth-h" class="ih">
+                        <img class="pro-img" src="./images/electricity-distribution.jpg">
+                    </div>
+                </div>
+                <div id="text-cont01">
+
+                    <ul>
+                        <li>Solar power is converted into electricity using photovoltaic (PV) cells or solar cells.</li>
+                        <li>These cells capture the sun's energy and convert it into electricity by stimulating
+                            electrons in silicon cells with photons of light from the sun .</li>
+                        <li>The electricity generated is direct current (DC) electricity, which is not the type of
+                            electricity that powers most homes, which is alternating current (AC) electricity.</li>
+                        <li>With an inverter device, DC electricity can be easily changed into AC electricity .</li>
+                        <li>The AC electricity can then be supplied to homes and devices, often storing excess energy in
+                            solar batteries for nighttime use .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span id="benefits"></span>
+        <div id="third-sec">
+            <br><br><br>
+            <h2 class="heading01">Benefits of Using Solar Energy</h2>
+            <div id="grid-cont">
+                <div class="grid-items">
+                    <div class="cap-img"><img src="./images/derisk.jpg"></div>
+                    <div class="all-text-holder">
+                        <h3 class="heading-txt-holder">1. De-risk investment</h3>
+                        <ul class="main-text-body">
+                            <li>Providing catalytic first loss capital</li>
+                            <li>Securing uptake commitments from humanitarian organizations to guarantee the purchase of
+                                a minimum viable quantity of power</li>
+                            <li>Offering loan guarantees that enable solar energy companies to access credit at
+                                reasonable rates</li>
+                            <li>Designing insurance against early termination in the event that a displacement community
+                                is shut down earlier than anticipated</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <div class="cap-img"><img src="./images/cross-sector.jpg"></div>
+                    <div class="all-text-holder">
+                        <h3 class="heading-txt-holder">2. Cross-sector collaboration</h3>
+                        <p class="main-text-body">As they navigate what for them is the new world of private finance,
+                            international organizations and NGOs must pool their expertise and partner with financial
+                            institutions to identify and structure investable opportunities on the ground—and ensure
+                            investors are aware of those opportunities.</p>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <div class="cap-img"><img src="./images/p&r.jpg"></div>
+                    <div class="all-text-holder">
+                        <h3 class="heading-txt-holder">3. Enabling solar power regulation</h3>
+                        <p class="main-text-body">Governments must design regulatory and refugee policies that can
+                            attract investors to solar energy solutions.</p>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <div class="cap-img"><img src="./images/pp.jpg"></div>
+                    <div class="all-text-holder">
+                        <h3 class="heading-txt-holder">4. Public-private collaboration</h3>
+                        <p class="main-text-body">Solar companies should collaborate with international organizations to
+                            ensure their services meet humanitarian needs.</p>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <div class="cap-img"><img src="./images/sip.jpg"></div>
+                    <div class="all-text-holder">
+                        <h3 class="heading-txt-holder">5. Longer term systemic investments</h3>
+                        <p class="main-text-body">In the longer term, incentives must also be created to enable private
+                            capital to make systemic investments in everything from health and education to
+                            employability and microfinance—investments that can enhance resilience, promote economic
+                            development, thereby helping to prevent the conditions that prompt migration in the first
+                            place. In the meantime, however, there is an urgent need to direct more private capital
+                            towards developments that can improve lives and support livelihoods for displaced and
+                            underserved communities.</p>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <div class="cap-img"><img src="./images/use-of-solar-energy.jpg"></div>
+                    <div class="all-text-holder">
+                        <h3 class="heading-txt-holder">6. Environmental effects</h3>
+                        <p class="main-text-body">Solar energy saves the environment by generating clean electricity
+                            without emitting greenhouse gases, reducing air and water pollution. It conserves natural
+                            resources, mitigates climate change, protects ecosystems, and promotes energy independence.
+                            With a long lifespan and minimal water usage, solar power fosters sustainability, job
+                            creation, and community empowerment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fourth-sec">
+            <br><br><br><br><br>
+            <h2 class="heading01" style="color: black;">Where You Can Buy These Peripherals</h2>
+            <div id="items-container">
+                <div class="main-item">
+                    <div class="item-image-holder"><img src="./images/solar-panel.jpg"></div>
+                    <h4 class="item-name">Solar Panel</h4>
+                    <div class="link-holder">
+                        <a href="https://amzn.eu/d/bg5in4l" class="links-to-buy">Buy from Amazon</a>
+                        <a href="http://dl.flipkart.com/dl/solar-universe-india-zues-440w-half-cut-monocrystalline-144-cells-single-piece-panel/p/itm40ad7dbee746f?pid=SLPGZTMHHXYSNQN5&cmpid=product.share.pp&lid=LSTSLPGZTMHHXYSNQN5WLGKPM"
+                            class="links-to-buy">Buy from Flipkart</a>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <div class="item-image-holder"><img src="./images/inverter.jpg"></div>
+                    <h4 class="item-name">Solar Inverter</h4>
+                    <div class="link-holder">
+                        <a href="https://amzn.eu/d/6JLU6ZB" class="links-to-buy">Buy from Amazon</a>
+                        <a href="https://dl.flipkart.com/dl/luminous-1100-12v-power-sine-pure-wave-inverter/p/itmc4c08792a3275?pid=INVFVQF67VMZFGFD&cmpid=product.share.pp&lid=LSTINVFVQF67VMZFGFDQWO2E8"
+                            class="links-to-buy">Buy from Flipkart</a>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <div class="item-image-holder"><img src="./images/battery.jpg"></div>
+                    <h4 class="item-name">Solar Battery</h4>
+                    <div class="link-holder">
+                        <a href="https://amzn.eu/d/55ToFSR" class="links-to-buy">Buy from Amazon</a>
+                        <a href="https://dl.flipkart.com/dl/livguard-lg-1050i-it-1636stj-trolley-tubular-inverter-battery/p/itm2b0b5933e5091?pid=IBAGV4YXM9WHCWF8&cmpid=product.share.pp&lid=LSTIBAGV4YXM9WHCWF8KTK3SI"
+                            class="links-to-buy">Buy from Flipkart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p>*Prices are subjected to retailer company</p>
+        <div id="fifth-sec">
+            <br><br><br><br>
+            <h2 class="heading01">Lets' check How Much You Will Save</h2>
+            <div id="calculate-savings">
+                <input type="text" name="tot-watt" id="tot-watt" class="input"
+                    placeholder="Enter the watt amount used in one hour by your all e-divices">
+                <input type="text" name="tot-hour" id="tot-hour" class="input"
+                    placeholder="Enter the hours your all e-divices be active">
+                <input type="text" name="watt-cost" id="watt-cost" class="input"
+                    placeholder="Enter the value of per unit watt">
+                <div id="check">
+                    <input type="checkbox" name="approx" id="approx">
+                    <label for="approx">all provided information is approximately near real value</label>
+                </div>
+                <div id="btn-holder">
+                    <button class="btn1" id="clear" onclick="clearentries()">Clear Entries</button>
+                    <button class="btn1" id="calculate" onclick="calculate()">Calculate</button>
+                </div>
+                <div>
+                    <p style="display: inline;">*You need total of
+                    <p id="saving-details01" class="values">X</p> Solar Panel</p><br>
+                    <p style="display: inline;">**And You Will Save Rs.
+                    <p id="saving-details02" class="values">XXXX</p> in 10 Year</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="first-sec-footer">
+            <img src="./images/hut-img.svg" alt="">
+            <p>Great!! Share With Others as Their Friends and Make Them Aware Also</p>
+            <a href="#" style="text-decoration: none; margin-left: 150px; padding: 15px 10px;">
+                <div id="btn1" class="search-btn" onclick="doalert()">Contact today!</div>
+            </a>
+        </div>
+        <div id="second-sec-footer">
+            <div class="mini-holders" onclick="doalert()">
+                <img src="./images/customer-serv.png" alt="">
+                <p class="nt">24/7 customer care</p>
+            </div>
+            <div class="mini-holders" onclick="doalert()">
+                <img src="./images/order.png" alt="">
+                <p class="nt">cancel Orders anytime</p>
+            </div>
+            <div class="mini-holders" onclick="doalert()">
+                <img src="./images/mail.png" alt="">
+                <p class="nt">stay in touched via email</p>
+            </div>
+        </div>
+        <div id="third-sec-footer">
+            <h1 id="styler">Contrubuters...<br>
+                <p id="desc">meet the efforts behind this project</p>
+            </h1>
+            <div id="profiles">
+                <div class="profile-holder">
+                    <img src="./images/khot.jpg" alt="Souvik Gupta" class="profile-img">
+                    <h3 class="name">Aditya Khot</h3>
+                    <div class="account-holders">
+                        <a href="https://www.linkedin.com/in/aditya-khot-a21926260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./images/linkedin.png"
+                                alt=""></a>
+                        <a href="https://github.com/ItzzAditya"><img src="./images/github.png" alt=""></a>
+                        <a href="https://instagram.com/khot.aditya7618?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img src="./images/instagram.png"
+                                alt=""></a>
+                    </div>
+                </div>
+                <div class="profile-holder">
+                    <img src="./images/os.jpg" alt="Rohit Thakur" class="profile-img">
+                    <h3 class="name">Uvais RS</h3>
+                    <div class="account-holders">
+                        <a
+                            href="https://www.linkedin.com/in/uvais-r-s-272a402a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img
+                                src="./images/linkedin.png" alt=""></a>
+                        <a href="https://github.com/uvaisreeza"><img src="./images/github.png" alt=""></a>
+                        <a href="https://instagram.com/uways_al_qaraniyy?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><img
+                                src="./images/instagram.png" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="end-sec-footer">
+            <div class="horiline"></div>
+            <img src="./sunlogo.png" alt="" height="35px">
+            <h1 id="logo">SolarMoves</h1>
+            <div class="horiline"></div>
+        </div>
+        <p style="color: #f4f0f0; font-family: sans-serif; font-size: 12px; margin-bottom: 50px;">Copyright 2023 ©
+            Developer Uways Pvt. Ltd. All Rights Reserved.</p>
+
+
+    </footer>
+
+</body>
+
+</html>
